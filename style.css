@@ -382,38 +382,44 @@ body {
     }
 }
 
-/* Estilos responsivos */
 @media (max-width: 768px) {
     body {
-        align-items: center;
+        flex-direction: column;   /* Cambiamos el eje a columna */
+        align-items: center;      /* Centra todo */
         justify-content: center;
         padding: 20px;
     }
 
     .flower_wrapper {
-        transform: translateX(-50%) scale(0.8); /* Reduce un poco la flor */
+        position: relative;       /* Que fluya en el centro */
+        left: auto;
+        bottom: auto;
+        transform: none;          /* Quitamos el translateX */
+        margin-bottom: 30px;      /* Espacio con el texto */
     }
 
     #text {
-        font-size: 6vw; /* Texto proporcional a la pantalla */
-        bottom: 15px;
-        right: 15px;
-        text-align: center;
-        width: 90%; /* Para que no se corte */
+        position: relative;       /* Ya no fijo */
+        bottom: auto;
+        right: auto;
+        font-size: 6vw;           /* Escalable */
+        text-align: center;       /* Centrado debajo de la flor */
+        width: 100%;              /* Que ocupe todo el ancho */
     }
 }
 
 @media (max-width: 480px) {
     .flower_wrapper {
-        transform: translateX(-50%) scale(0.6); /* Aún más pequeño en celulares chicos */
+        transform: scale(0.8);   /* Más pequeña en celulares chicos */
+        margin-bottom: 20px;
     }
 
     #text {
         font-size: 7vw;
-        bottom: 10px;
-        right: 10px;
+        margin-top: 10px;
     }
 }
+
 
 
 
