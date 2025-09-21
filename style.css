@@ -382,6 +382,39 @@ body {
     }
 }
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    body {
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .flower_wrapper {
+        transform: translateX(-50%) scale(0.8); /* Reduce un poco la flor */
+    }
+
+    #text {
+        font-size: 6vw; /* Texto proporcional a la pantalla */
+        bottom: 15px;
+        right: 15px;
+        text-align: center;
+        width: 90%; /* Para que no se corte */
+    }
+}
+
+@media (max-width: 480px) {
+    .flower_wrapper {
+        transform: translateX(-50%) scale(0.6); /* Aún más pequeño en celulares chicos */
+    }
+
+    #text {
+        font-size: 7vw;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
 
 
 
